@@ -1,0 +1,40 @@
+<form name="myform" method="post">
+  <div>
+    <label>Nom</label>
+  </div>
+  <div class="">
+    <input type="text" name="name" placeholder="Nom" ng-model="name" ng-pattern="/^[a-zA-Zàâäéèêëçùûüôö]+[-']?[a-zA-Zàâäéèêëçùûüôö]+$/">
+    <div class="valid" ng-show="myform.name.$valid">saisie valide</div>
+    <div class="invalid" ng-show="myform.name.$error.pattern">saisie non valide</div>
+  </div>
+  <div>
+    <label>Adresse E-mail</label>
+  </div>
+  <div class="">
+    <input type="email" name="mail" placeholder="adresse mail" ng-model="mail">
+    <div class="valid" ng-show="myform.mail.$valid">Adresse valide</div>
+    <div class="invalid" ng-show="myform.mail.$error.email">Adresse invalide</div>
+  </div>
+  <div>
+    <label>Sujet</label>
+  </div>
+  <div class="">
+    <input class="subject" type="text" name="subject" placeholder="sujet" ng-model="subject" required>
+    <div class="valid" ng-show="myform.subject.$valid">champs valide</div>
+    <div class="invalid" ng-show="myform.subject.$error.required">Champs requis</div>
+  </div>
+  <div>
+    <label>Votre texte</label>
+  </div>
+  <div class="">
+    <textarea name="text" rows="8" cols="80" ng-model="text" required></textarea>
+    <div class="valid" ng-show="myform.areatext.$valid">champs valide</div>
+    <div class="invalid" ng-show="myform.areatext.$error.required">Champs requis</div>
+  </div>
+  <div  >
+    <button type="button" ng-click="send()">CLICK</button>
+  </div>
+</form>
+<ul>
+  <li ng-repeat="sujet in subjectList"><a href="#!/cible/{{$index}}">{{sujet}}</a></li>
+</ul>

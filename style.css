@@ -1,0 +1,15 @@
+.valid{
+  background-color: lightgreen;
+  width: 10%;
+}
+.invalid{
+  background-color: pink;
+  width: 10%;
+}
+.submit{
+  background-color: lightblue;
+}
+.modalcontent{
+  float: left;
+  width: 30%;
+}
